@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Valentine's Day</title>
+    <link rel="icon" type="image/png" href="f445c4b7eec721298d98777ad0ba31d6.png">
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+
+    <div class="hearts-container"></div> <!-- Анимация падающих сердец -->
+
+    <!-- Первая страница: Ввод пароля -->
+    <div class="page active" id="page1">
+        <div class="login-box">
+            <img src="photo_6_2025-02-13_22-42-14.jpg" alt="Фото пары" class="photo">
+            <div class="password-container">
+                <input type="password" id="password" readonly>
+                <div class="keypad">
+                    <button onclick="enterDigit('1')">1</button>
+                    <button onclick="enterDigit('2')">2</button>
+                    <button onclick="enterDigit('3')">3</button>
+                    <button onclick="enterDigit('4')">4</button>
+                    <button onclick="enterDigit('5')">5</button>
+                    <button onclick="enterDigit('6')">6</button>
+                    <button onclick="enterDigit('7')">7</button>
+                    <button onclick="enterDigit('8')">8</button>
+                    <button onclick="enterDigit('9')">9</button>
+                    <button onclick="clearPassword()" class="clear">⨉</button>
+                    <button onclick="enterDigit('0')">0</button>
+                    <button onclick="checkPassword()" class="enter">Ввод</button>
+                </div>
+            </div>
+        </div>
+        <p id="hint" class="hint">В этот день мы не знали, что все так обернется</p>
+    </div>
+
+    <!-- Вторая страница: Таймер -->
+    <div class="page" id="page2">
+        <h2>Как долго мы знакомы?</h2>
+        <div id="timer"></div>
+        <button class="next-btn" onclick="nextPage(3)">Liza & Dima</button>
+    </div>
+
+    <!-- Третья страница: Фото -->
+    <div class="page" id="page3">
+        <h2>Forever</h2>
+        <div class="photo-grid">
+            <img src="photo_1_2025-02-13_22-42-14.jpg" alt="Фото 1">
+            <img src="photo_2_2025-02-13_22-42-14.jpg" alt="Фото 2">
+            <img src="photo_3_2025-02-13_22-42-14.jpg" alt="Фото 3">
+            <img src="photo_4_2025-02-13_22-42-14.jpg" alt="Фото 4">
+            <img src="photo_5_2025-02-13_22-42-14.jpg" alt="Фото 5">
+        </div>
+        <button class="next-btn" onclick="nextPage(4)">Дальше</button>
+    </div>
+
+    <!-- Четвертая страница: Поздравление -->
+    <div class="page" id="page4">
+        <div class="message-box">
+            <p>В тот день, когда мы познакомились, я и представить не мог, что ты станешь для меня настолько близким человеком...</p>
+            <p>P.S. Я даже не представляю, как поздравлять с 14 февраля, просто хочу сказать, как я тебя люблю ❤️</p>
+        </div>
+    </div>
+
+</body>
+</html>
